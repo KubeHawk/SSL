@@ -148,7 +148,7 @@ After that, the configuration file should look like this.
 server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
- listen 443 ssl;
+ 	listen 443 ssl;
 	# SSL configuration
 	#
 	# listen 443 ssl default_server;
@@ -173,7 +173,7 @@ server {
 	server_name _;
 
 	ssl_certificate /etc/nginx/ssl/nginx.crt;
- ssl_certificate_key /etc/nginx/ssl/nginx.key;
+ 	ssl_certificate_key /etc/nginx/ssl/nginx.key;
 
 	location / {
 		# First attempt to serve request as file, then

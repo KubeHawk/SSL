@@ -91,3 +91,22 @@ openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 36
 In order to perform the same work through a container, we just have to containerize our application with the [Dockerfile](https://github.com/KubeHawk/SSL/blob/main/Fast-Api/Dockerfile).
 
 ![image](https://github.com/KubeHawk/SSL/assets/75808939/5f49df70-cac7-4a1c-b55a-208979cde00d)
+
+```sh
+FROM python:3.10
+WORKDIR /app
+COPY requirements.txt /app
+RUN pip install -r requirements.txt
+COPY . /app
+EXPOSE 8432
+EXPOSE 80
+EXPOSE 443
+CMD ["python3", "server.py"]
+```
+
+```sh
+docker build -t fast-api .
+```
+```sh
+docker run -p 8432:8432 fast-api
+```

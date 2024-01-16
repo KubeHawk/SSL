@@ -6,7 +6,7 @@
 
 - [Overview](#overview)
 - [Flask Secure Connection](#Flask-Secure-Connection)
-- [Fast Api Secure Connection](#Fastapi-Secure-Connection)
+- [Fast Api Secure Connection](#Fast-Api-Secure-Connection)
 <!-- tocstop -->
 
 ## Overview
